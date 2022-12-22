@@ -2,8 +2,7 @@
 	"name": "taro-ui-vue",
 	"private": true,
 	"scripts": {
-    "install": "CXXFLAGS=\"--std=c++14\" pnpm install",
-		"publish": "lerna publish --conventional-commits"
+    "install": "CXXFLAGS=\"--std=c++14\" pnpm install"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.10.4",

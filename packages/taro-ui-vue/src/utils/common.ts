@@ -20,13 +20,16 @@ const getEnvs = (): ENVS => {
 
 function delay(delayTime = 500): Promise<null> {
   return new Promise((resolve) => {
-    if ([Taro.ENV_TYPE.WEB, Taro.ENV_TYPE.SWAN, Taro.ENV_TYPE.WEAPP].includes(ENV)) {
+    if (
+      // @ts-ignore
+      [Taro.ENV_TYPE.WEB, Taro.ENV_TYPE.SWAN, Taro.ENV_TYPE.WEAPP].includes(ENV)
+    ) {
       setTimeout(() => {
-        resolve()
+        resolve(null)
       }, delayTime)
       return
     }
-    resolve()
+    resolve(null)
   })
 }
 

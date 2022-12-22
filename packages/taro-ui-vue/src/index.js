@@ -171,7 +171,10 @@ const install = function (Vue) {
       const name = comp.extendOptions.name
       // 压缩后 vue-class-component 组件的 options.name 会是小写字母开头的
       if (/^[a-z]/.test(name)) {
-        options.name = comp.options ? comp.options.components[name].superOptions.name : name
+        // @ts-ignore
+        options.name = comp.options
+          ? comp.options.components[name].superOptions.name
+          : name
       }
       Vue.component(options.name, options)
     } else {

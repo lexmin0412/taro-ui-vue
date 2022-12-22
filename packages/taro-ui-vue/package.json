@@ -99,6 +99,7 @@
 		"node-sass": "6.0.1",
 		"prettier": "^2.0.5",
 		"rimraf": "^3.0.2",
+		"rollup": "1.32.1",
 		"rollup-plugin-babel": "^4.4.0",
 		"rollup-plugin-copy": "^3.3.0",
 		"rollup-plugin-terser": "^6.1.0",
@@ -115,5 +116,5 @@
 		"vue-template-compiler": "^2.5.0",
 		"webpack": "^4.42.1"
 	},
-	"gitHead": "4bab44cd49e557e8f0d616aed35b9589d4956f31"
+	"gitHead": "18cc4cd44121b95e11afd8700f4572e8e2e4f626"
 }

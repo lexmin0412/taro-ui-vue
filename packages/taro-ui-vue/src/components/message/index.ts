@@ -44,6 +44,7 @@ export default {
         }, this.duration)
       })
       // 绑定函数
+      // @ts-ignore
       Taro.atMessage = Taro.eventCenter.trigger.bind(
         Taro.eventCenter,
         'atMessage'
