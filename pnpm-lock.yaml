@@ -237,8 +237,8 @@ importers:
       vue-template-compiler: 2.7.14
     devDependencies:
       '@babel/core': 7.20.5
-      '@tarojs/mini-runner': 3.5.10_vue@2.7.14
-      '@tarojs/webpack-runner': 3.5.10_@babel+core@7.20.5+vue@2.7.14
+      '@tarojs/mini-runner': 3.5.10_node-sass@8.0.0+vue@2.7.14
+      '@tarojs/webpack-runner': 3.5.10_64425d5d4d116ba0816b282a4f42523a
       '@types/webpack-env': 1.18.0
       '@typescript-eslint/eslint-plugin': 2.34.0_2b015b1c4b7c4a3ed9a197dc233b1a35
       '@typescript-eslint/parser': 2.34.0_eslint@6.8.0+typescript@3.9.10
@@ -3655,7 +3655,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@tarojs/mini-runner/3.5.10_vue@2.7.14:
+  /@tarojs/mini-runner/3.5.10_node-sass@8.0.0+vue@2.7.14:
     resolution: {integrity: sha512-faSwpZyunk5yEDY7pnHQ/6YFzIHRfkA3e4wlzvDDW4+6ytUvmXF2wcmKy5WS+QuaON7CrqkJqJ9B6ZAdCrbPBQ==}
     dependencies:
       '@babel/core': 7.20.5
@@ -3703,7 +3703,7 @@ packages:
       resolve: 1.22.1
       resolve-url-loader: 4.0.0
       sass: 1.50.0
-      sass-loader: 10.2.0_sass@1.50.0+webpack@4.46.0
+      sass-loader: 10.2.0_e9e87da46938e1eda315e366e9684ac5
       sax: 1.2.4
       stylus: 0.55.0
       stylus-loader: 3.0.2_stylus@0.55.0
@@ -3935,7 +3935,7 @@ packages:
       '@tarojs/runtime': 3.5.10
       vue: 2.7.14
 
-  /@tarojs/webpack-runner/3.5.10_@babel+core@7.20.5+vue@2.7.14:
+  /@tarojs/webpack-runner/3.5.10_64425d5d4d116ba0816b282a4f42523a:
     resolution: {integrity: sha512-m6y07qVxHdUV+sBHj6uYchCFJRD+Nro83m6TCywOOsfrcyIG2qMGp2KAUOBcCThCNgm9UtnaaYlAEyWG2YI6gw==}
     peerDependencies:
       webpack: ^4.46.0
@@ -3970,7 +3970,7 @@ packages:
       resolve: 1.22.1
       resolve-url-loader: 3.1.3
       sass: 1.50.0
-      sass-loader: 10.2.0_sass@1.50.0
+      sass-loader: 10.2.0_node-sass@8.0.0+sass@1.50.0
       style-loader: 1.3.0
       stylus: 0.55.0
       stylus-loader: 3.0.2_stylus@0.55.0
@@ -15259,7 +15259,7 @@ packages:
       webpack: 4.46.0
     dev: true
 
-  /sass-loader/10.2.0_sass@1.50.0:
+  /sass-loader/10.2.0_e9e87da46938e1eda315e366e9684ac5:
     resolution: {integrity: sha512-kUceLzC1gIHz0zNJPpqRsJyisWatGYNFRmv2CKZK2/ngMJgLqxTbXwe/hJ85luyvZkgqU3VlJ33UVF2T/0g6mw==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -15278,34 +15278,36 @@ packages:
       klona: 2.0.5
       loader-utils: 2.0.4
       neo-async: 2.6.2
-      sass: 1.50.0
-      schema-utils: 3.1.1
-      semver: 7.3.8
-    dev: true
-
-  /sass-loader/10.2.0_sass@1.50.0+webpack@4.46.0:
-    resolution: {integrity: sha512-kUceLzC1gIHz0zNJPpqRsJyisWatGYNFRmv2CKZK2/ngMJgLqxTbXwe/hJ85luyvZkgqU3VlJ33UVF2T/0g6mw==}
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      fibers: '>= 3.1.0'
-      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
-      sass: ^1.3.0
-      webpack: ^4.36.0 || ^5.0.0
-    peerDependenciesMeta:
-      fibers:
-        optional: true
-      node-sass:
-        optional: true
-      sass:
-        optional: true
-    dependencies:
-      klona: 2.0.5
-      loader-utils: 2.0.4
-      neo-async: 2.6.2
+      node-sass: 8.0.0
       sass: 1.50.0
       schema-utils: 3.1.1
       semver: 7.3.8
       webpack: 4.46.0
+    dev: true
+
+  /sass-loader/10.2.0_node-sass@8.0.0+sass@1.50.0:
+    resolution: {integrity: sha512-kUceLzC1gIHz0zNJPpqRsJyisWatGYNFRmv2CKZK2/ngMJgLqxTbXwe/hJ85luyvZkgqU3VlJ33UVF2T/0g6mw==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      fibers: '>= 3.1.0'
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
+      sass: ^1.3.0
+      webpack: ^4.36.0 || ^5.0.0
+    peerDependenciesMeta:
+      fibers:
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+    dependencies:
+      klona: 2.0.5
+      loader-utils: 2.0.4
+      neo-async: 2.6.2
+      node-sass: 8.0.0
+      sass: 1.50.0
+      schema-utils: 3.1.1
+      semver: 7.3.8
     dev: true
 
   /sass-loader/8.0.2_node-sass@6.0.1+webpack@4.46.0:
