@@ -10,6 +10,10 @@
 		"dist",
 		"src"
 	],
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
 	"author": "psaren",
 	"repository": {
 		"type": "git",
@@ -111,5 +115,5 @@
 		"vue-template-compiler": "^2.5.0",
 		"webpack": "^4.42.1"
 	},
-	"gitHead": "52c90a19a072f9cf0316aac9b3f62f2b5dc5fbbc"
+	"gitHead": "4bab44cd49e557e8f0d616aed35b9589d4956f31"
 }
