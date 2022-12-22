@@ -1,19 +1,17 @@
 {
-  "name": "taro-ui-vue",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
-  "scripts": {
-    "publish": "lerna publish --conventional-commits"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "lerna": "^3.22.1"
-  }
+	"name": "taro-ui-vue",
+	"private": true,
+	"scripts": {
+    "install": "CXXFLAGS=\"--std=c++14\" pnpm install",
+		"publish": "lerna publish --conventional-commits"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.10.4",
+		"@babel/plugin-proposal-class-properties": "^7.10.4",
+		"@babel/plugin-syntax-dynamic-import": "^7.8.3",
+		"@babel/preset-env": "^7.10.4",
+		"@babel/preset-react": "^7.10.4",
+		"lerna": "6.1.0",
+		"node-sass": "^8.0.0"
+	}
 }

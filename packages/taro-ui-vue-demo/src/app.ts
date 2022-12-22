@@ -19,14 +19,16 @@ import DocsHeader from './components/DocsHeader.vue'
 Vue.config.productionTip = false
 Vue.prototype.$taro = Taro
 
+console.log(111111111)
+
 Vue.component('DocsHeader', DocsHeader)
 Vue.use(TaroUi)
 
-const App = new Vue({
+const App = {
   render(h) {
     // this.$slots.default 是将要会渲染的页面
     return h('block', this.$slots.default)
   },
-})
+}
 
 export default App

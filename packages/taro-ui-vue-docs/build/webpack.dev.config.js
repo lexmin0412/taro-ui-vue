@@ -8,18 +8,18 @@ const projectRoot = getProjectRoot()
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'inline',
   output: {
     path: path.resolve(projectRoot, conf.output),
     filename: 'js/[name].js',
     chunkFilename: 'chunk/[name].chunk.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       BASE_NAME: '`/`',
       BUILD_MODE: `'dev'`,
-    })
-  ]
+    }),
+  ],
 }
