@@ -24,10 +24,10 @@ jobs:
         npm install -g pnpm
         npm install -g @tarojs/cli@3.5.10
         cd packages/taro-ui-vue-demo
-        pnpm install
+        pnpm install --no-frozen-lockfile
         pnpm build:h5
         cd ../taro-ui-vue-docs
-        pnpm install
+        pnpm install --no-frozen-lockfile
         pnpm build
 
     # react项目的FOLDER为build，vue项目改为dist
