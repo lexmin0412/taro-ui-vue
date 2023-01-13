@@ -22,6 +22,7 @@ jobs:
     - name: Install and Build
       run: |
         npm install -g pnpm
+        pnpm install @tarojs/cli@3.5.10 -g
         cd packages/taro-ui-vue-demo
         pnpm install
         pnpm build:h5
