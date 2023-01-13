@@ -9,5 +9,10 @@
 		"@babel/preset-react": "^7.10.4",
 		"lerna": "6.1.0",
 		"node-sass": "^8.0.0"
+	},
+	"pnpm": {
+		"patchedDependencies": {
+			"sass-loader@8.0.2": "patches/sass-loader@8.0.2.patch"
+		}
 	}
 }

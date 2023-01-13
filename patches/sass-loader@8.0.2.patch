@@ -1,0 +1,17 @@
+diff --git a/dist/getSassImplementation.js b/dist/getSassImplementation.js
+index 32828911facaf09f3d6fc62c5187d63ae94ee28d..67d94534a29e83327d681694b6de8c22af7bac63 100644
+--- a/dist/getSassImplementation.js
++++ b/dist/getSassImplementation.js
+@@ -42,9 +42,9 @@ function getSassImplementation(implementation) {
+ 
+     return resolvedImplementation;
+   } else if (implementationName === 'node-sass') {
+-    if (!_semver.default.satisfies(version, '^4.0.0')) {
+-      throw new Error(`Node Sass version ${version} is incompatible with ^4.0.0.`);
+-    }
++    // if (!_semver.default.satisfies(version, '^4.0.0')) {
++    //   throw new Error(`Node Sass version ${version} is incompatible with ^4.0.0.`);
++    // }
+ 
+     return resolvedImplementation;
+   }
