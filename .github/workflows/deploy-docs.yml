@@ -15,12 +15,12 @@ jobs:
 
     # react项目为npm run-script build，vue项目改为npm run build
     - name: Node Version Ready
-    - uses: actions/setup-node@v2
+      uses: actions/setup-node@v2
       with:
         node-version : '14'
 
     - name: Install and Build
-    - run: |
+      run: |
         npm install -g pnpm
         cd packages/taro-ui-vue-demo
         pnpm install
