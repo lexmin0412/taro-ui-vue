@@ -1,0 +1,33 @@
+name: 部署文档
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+
+    # react项目为npm run-script build，vue项目改为npm run build
+    - name: Install and Build
+      run: |
+        npm install -g pnpm
+        cd packages/taro-ui-vue-demo
+        pnpm install
+        pnpm build:h5
+        cd ../taro-ui-vue-docs
+        pnpm install
+        pnpm build
+
+    # react项目的FOLDER为build，vue项目改为dist
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: packages/taro-ui-vue-docs/dist
