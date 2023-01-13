@@ -14,26 +14,26 @@ module.exports = {
     path: path.resolve(projectRoot, conf.output),
     filename: 'js/[name].js',
     chunkFilename: 'chunk/[name].chunk.js',
-    publicPath: './'
+    publicPath: './',
   },
   resolve: {
-    mainFields: ['main']
+    mainFields: ['main'],
   },
   plugins: [
     new CleanWebpackPlugin({
       verbose: true,
       cleanOnceBeforeBuildPatterns: [
         `${path.resolve(projectRoot, conf.output)}/*`,
-        `!${path.resolve(projectRoot, conf.output)}/lib/*`
-      ]
+        `!${path.resolve(projectRoot, conf.output)}/lib/*`,
+      ],
     }),
     new webpack.DefinePlugin({
-      BASE_NAME: `'/taro-ui'`,
+      BASE_NAME: `'/taro-ui-vue'`,
       BUILD_MODE: `'prod'`,
     }),
     new FaviconWebpackPlugin({
       logo: path.resolve(projectRoot, 'assets/favicon.png'),
-      prefix: 'favicons/'
-    })
-  ]
+      prefix: 'favicons/',
+    }),
+  ],
 }
